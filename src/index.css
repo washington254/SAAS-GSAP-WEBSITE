@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  main {
+    @apply mx-auto max-w-7xl min-h-screen pt-24 pb-10 px-6 bg-white text-zinc-900;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply mx-auto max-w-7xl pt-24 pb-10 px-6;
+  }
+}
+
+body {
+  @apply bg-white text-zinc-900 antialiased;
+  font-family: 'Inter', system-ui, sans-serif;
+}
