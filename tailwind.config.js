@@ -10,6 +10,7 @@ export default {
         dark: '#09090b',
         light: '#fafafa',
         surface: '#ffffff',
+        lightDark: '#232323',
         muted: '#71717a',
       }
     },
