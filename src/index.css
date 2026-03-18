@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  main {
-    @apply mx-auto max-w-7xl min-h-screen pt-24 pb-10 px-6 bg-white text-zinc-900;
-  }
-}
 
 @layer utilities {
   .container {
