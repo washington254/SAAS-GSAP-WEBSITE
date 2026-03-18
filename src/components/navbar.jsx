@@ -30,8 +30,8 @@ const Navbar = () => {
 
     return (
         <div className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled
-                ? 'py-3 bg-white/80 backdrop-blur-md shadow-sm border-b border-zinc-100'
-                : 'py-5 bg-transparent'
+            ? 'py-3 bg-white/80 backdrop-blur-md shadow-sm border-b border-zinc-100'
+            : 'py-5 bg-transparent'
             }`}>
             <nav className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                 {/* Logo Section */}
@@ -43,7 +43,7 @@ const Navbar = () => {
                         height="32"
                         className="transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110"
                     />
-                    <h1 className="text-xl font-bold tracking-tight text-zinc-900 bg-gradient-to-r from-zinc-900 to-zinc-500 bg-clip-text text-transparent">
+                    <h1 className="text-xl font-bold tracking-tight text-dark  bg-clip-text ">
                         Art Vista
                     </h1>
                 </div>
@@ -55,10 +55,10 @@ const Navbar = () => {
                             <li key={link.title}>
                                 <a
                                     href={link.path}
-                                    className="text-sm font-medium text-dark hover:text-zinc-900 transition-colors relative group"
+                                    className="text-sm font-medium text-muted hover:text-primary transition-colors relative group"
                                 >
                                     {link.title}
-                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
                                 </a>
                             </li>
                         ))}
@@ -69,7 +69,7 @@ const Navbar = () => {
                 <div className="flex items-center gap-4">
                     {/* User Icon (Login Replacement) */}
                     <button
-                        className="p-2 text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100 rounded-full transition-all"
+                        className="p-2 text-muted hover:text-primary hover:bg-secondary rounded-full transition-all"
                         aria-label="User Profile"
                     >
                         <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -80,7 +80,7 @@ const Navbar = () => {
 
                     {/* Sun Icon (Sign Up Replacement) */}
                     <button
-                        className="p-2 text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100 rounded-full transition-all"
+                        className="p-2 text-muted hover:text-primary hover:bg-secondary rounded-full transition-all"
                         aria-label="Theme Toggle"
                     >
                         <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -98,7 +98,7 @@ const Navbar = () => {
 
                     {/* Mobile Toggle */}
                     <button
-                        className="lg:hidden p-2 text-zinc-900"
+                        className="lg:hidden  p-2 text-primary"
                         onClick={toggleMenu}
                         aria-label="Toggle Menu"
                     >
@@ -113,14 +113,14 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Dropdown Menu */}
-                <div className={`absolute top-full left-0 w-full bg-white border-b border-zinc-100 shadow-xl lg:hidden transition-all duration-300 overflow-hidden ${isMenuOpen ? 'max-h-[500px] opacity-100 py-8' : 'max-h-0 opacity-0 py-0'
+                <div className={`absolute top-full left-0 w-full bg-light border-b border-secondary shadow-xl lg:hidden transition-all duration-300 overflow-hidden ${isMenuOpen ? 'max-h-[500px] opacity-100 py-8' : 'max-h-0 opacity-0 py-0'
                     }`}>
                     <ul className="flex flex-col items-center gap-6">
                         {navLinks.map((link) => (
                             <li key={link.title} className="w-full text-center">
                                 <a
                                     href={link.path}
-                                    className="text-lg font-medium text-zinc-600 hover:text-zinc-900 block w-full py-2"
+                                    className="text-lg font-medium text-muted hover:text-primary block w-full py-2"
                                     onClick={() => setIsMenuOpen(false)}
                                 >
                                     {link.title}
