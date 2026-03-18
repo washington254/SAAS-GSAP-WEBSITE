@@ -3,6 +3,7 @@ import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import {
   Home,
+  Strategy,
 } from "./pages";
 
 const App = () => {
@@ -11,7 +12,7 @@ const App = () => {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<><Home /><Strategy /></>} />
         </Routes>
         <Footer />
       </Router>
